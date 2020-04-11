@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".ui.notifications.AboutUsFragment">
+
+    <TextView
+        android:id="@+id/text_aboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="562dp"
+        android:textAlignment="center"
+        android:text="ABOUT US"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="378dp"
+        android:layout_height="436dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="22dp"
+        android:text="Lambton College is a public college located in Sarnia, Ontario, Canada. Lambton College has established a licensing agreement in Toronto, Ontario, Canada with Cestar College of Business, Health and Technology (Cestar College); a registered private career college. We refer to this licensing agreement as Lambton in Toronto. For over 10 years, Lambton College has been a leader in establishing overseas and off-site licensing agreements for the delivery of its curriculum. International students can now take advantage of this opportunity to study in Toronto. "
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:justificationMode="inter_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_aboutUs"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

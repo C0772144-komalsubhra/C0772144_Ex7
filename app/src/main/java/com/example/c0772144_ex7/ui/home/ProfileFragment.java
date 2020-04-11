@@ -1,0 +1,44 @@
+package com.example.c0772144_ex7.ui.home;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+
+import com.example.c0772144_ex7.R;
+
+import org.w3c.dom.Text;
+
+public class ProfileFragment extends Fragment {
+
+    private ProfileViewModel homeViewModel;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel =
+                ViewModelProviders.of(this).get(ProfileViewModel.class);
+        View root = inflater.inflate(R.layout.profile_fragment, container, false);
+        final TextView textView = root.findViewById(R.id.textView);
+        final TextView textView1=root.findViewById(R.id.textView2);
+        final TextView textView2= root.findViewById(R.id.textView3);
+        final ImageView imageView = root.findViewById(R.id.imageView);
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText("MY PROFILE");
+                textView1.setText("KOMAL SUBHRA");
+                textView2.setText("C0772144");
+                imageView.setImageResource(R.drawable.images);
+            }
+        });
+        return root;
+    }
+}
